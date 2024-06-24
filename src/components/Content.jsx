@@ -27,14 +27,12 @@ function Content() {
                 <p className="text-[1.5rem]">Boss</p>
               </div>
               <div className="w-0 overflow-hidden transition-all duration-300 ease-in-out bg-red-400 group-hover:w-full">
-                <div
-                  className="w-full h-[200px] bg-no-repeat bg-fixed md:text-[1.8rem]"
-                  style={{
-                    background: `url(${bosQori})`,
-                    backgroundSize: `15em auto`,
-                    backgroundPosition: `-2.5em -5.5em`,
-                  }}
-                ></div>
+                <img
+                  className="w-[150%] h-[200px] object-cover object-top"
+                  style={{ objectPosition: `center 30%` }}
+                  src={bosQori}
+                  alt="bosQori"
+                />
               </div>
             </Flexc>
           </Flexc>
