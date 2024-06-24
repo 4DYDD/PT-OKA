@@ -11,6 +11,16 @@ export default {
         secondary: "rgb(84,235,180)",
         tertiary: "rgb(5,58,38)",
       },
+      keyframes: {
+        buletan: {
+          "0%, 100%": { left: "-500px", scale: "0" },
+          "25%, 75%": { left: "0", scale: "1" },
+          "12%, 85%": { left: "0", scale: "0.5" },
+        },
+      },
+      animation: {
+        buletan: "buletan 4.5s both",
+      },
     },
   },
   plugins: [],

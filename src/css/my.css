@@ -1,0 +1,190 @@
+*,
+button,
+input,
+select,
+textarea,
+a {
+  font-family: Kanit, sans-serif;
+}
+
+.kotak--utama {
+  animation: kotakutama 6s both;
+}
+
+.kotak--wan {
+  animation: kotakwan 5.5s both;
+}
+
+.text--wan {
+  white-space: nowrap;
+
+  animation: textwan 3.5s both;
+  animation-delay: 0.5s;
+}
+
+.garis--wan {
+  animation: gariswan 4.5s both;
+}
+
+.garis--tu {
+  animation: garistu 4.5s both;
+}
+
+.garis--tri {
+  animation: garistri 4s both;
+  animation-delay: 0.5s;
+}
+
+@keyframes kotakutama {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  25% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  75% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes kotakwan {
+  0% {
+    height: 0;
+  }
+
+  10% {
+    height: 50px;
+  }
+
+  25% {
+    height: 150px;
+  }
+
+  60% {
+    height: 150px;
+  }
+
+  70% {
+    height: 50px;
+  }
+
+  80% {
+    height: 0;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes textwan {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gariswan {
+  0% {
+    height: 0;
+    rotate: 0deg;
+  }
+
+  13% {
+    height: 0em;
+    rotate: 0deg;
+  }
+
+  25% {
+    height: 0.6em;
+    rotate: 180deg;
+  }
+
+  75% {
+    height: 0.6em;
+    rotate: 180deg;
+  }
+
+  85% {
+    height: 0;
+  }
+
+  100% {
+    height: 0;
+    rotate: 0deg;
+  }
+}
+
+@keyframes garistu {
+  0% {
+    height: 0;
+    rotate: 0deg;
+  }
+
+  13% {
+    height: 0em;
+    rotate: 0deg;
+  }
+
+  25% {
+    height: 0.6em;
+    rotate: 90deg;
+  }
+
+  75% {
+    height: 0.6em;
+    rotate: 90deg;
+  }
+
+  85% {
+    height: 0;
+  }
+
+  100% {
+    height: 0;
+    rotate: 0deg;
+  }
+}
+
+@keyframes garistri {
+  0% {
+    height: 0;
+  }
+
+  10% {
+    height: 85%;
+  }
+
+  70% {
+    height: 85%;
+  }
+
+  85% {
+    height: 0;
+  }
+
+  100% {
+    height: 0;
+  }
+}
