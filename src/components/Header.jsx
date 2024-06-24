@@ -9,7 +9,11 @@ export default function Header() {
           center={true}
           className={`w-[80px] h-full bg-primary pointer-events-none`}
         >
-          <img src={oka} alt="OKA" className="w-[60px] rounded-xl" />
+          <img
+            src={oka}
+            alt="OKA"
+            className="w-[60px] print:w-[45px] rounded-xl"
+          />
         </Flexc>
 
         <div className="pembatas w-[1px] h-[80%] bg-gray-200"></div>

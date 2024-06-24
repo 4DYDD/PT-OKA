@@ -7,7 +7,7 @@ function Content() {
     <>
       <main className="w-full min-h-[100vh]">
         <div className="w-full h-[80px]"></div>
-        <div className="box-border w-full px-4 py-2 leading-none text-teal-700 text-start">
+        <div className="md:text-[1.3rem] box-border w-full md:px-6 px-4 py-2 leading-none text-teal-700 text-start">
           Dashboard :
         </div>
         <Flexc
@@ -20,15 +20,16 @@ function Content() {
           <Flexc className={`w-full`}>
             <Flexc
               between={true}
-              className={`w-[500px] bg-red-500 rounded-md shadow overflow-hidden group cursor-pointer`}
+              className={`w-[450px] bg-red-500 rounded-md shadow overflow-hidden group cursor-pointer`}
             >
-              <div className="flex-1 basis-[300px] text-center text-white">
+              <div className="flex-1 basis-[300px] text-center text-white print:text-gray-400">
                 <i class="fa-solid fa-user-secret text-[5rem]"></i>
-                <p className="text-[1.5rem]">Boss</p>
+                <p className="text-[1.5rem]">Qori</p>
+                <p className="text-[1rem] leading-none">{`{ Boss }`}</p>
               </div>
               <div className="w-0 overflow-hidden transition-all duration-300 ease-in-out bg-red-400 group-hover:w-full">
                 <img
-                  className="w-[150%] h-[200px] object-cover object-top"
+                  className="w-[150%] h-[200px] object-cover object-top pointer-events-none"
                   style={{ objectPosition: `center 30%` }}
                   src={bosQori}
                   alt="bosQori"
@@ -38,8 +39,8 @@ function Content() {
           </Flexc>
 
           <Card
-            fontSize={`text-[0.75rem] md:text-[1rem]`}
-            bgColor={`bg-sky-600`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
+            bgColor={`bg-sky-600 print:bg-sky-600`}
             header={[
               <>
                 <i className="fa-solid fa-users"></i>
@@ -71,8 +72,8 @@ function Content() {
           />
 
           <Card
-            fontSize={`text-[0.75rem] md:text-[1rem]`}
-            bgColor={`bg-yellow-500`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
+            bgColor={`bg-yellow-500 print:bg-yellow-500`}
             header={[
               <i className="fa-solid fa-laptop-code"></i>,
               <>
@@ -102,8 +103,8 @@ function Content() {
           />
 
           <Card
-            fontSize={`text-[0.75rem] md:text-[1rem]`}
-            bgColor={`bg-green-600`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
+            bgColor={`bg-green-600 print:bg-green-600`}
             header={[
               <i class="fa-solid fa-building text-[1.2em]"></i>,
               <>
