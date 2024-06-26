@@ -18,7 +18,7 @@ function Card({ font, bgColor, topHeader, header, rows, flex }) {
         <Flexc
           vcenter={true}
           center={true}
-          className={`w-[180px] h-full flex-col text-[1em] relative group transition-all duration-200 ease-in-out`}
+          className={`md:w-[180px] min-w-[150px] h-full flex-col text-[1em] relative group transition-all duration-200 ease-in-out`}
         >
           {topHeader && topHeader}
           <div

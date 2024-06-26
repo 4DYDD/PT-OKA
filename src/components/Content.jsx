@@ -2,9 +2,9 @@ import Flexc from "./Flexc";
 import Card from "./Card";
 import bosQori from "../assets/bosQori.jpg";
 import Andria from "../assets/Andria.jpg";
-import Lana from "../assets/Lana.png";
+import Maou from "../assets/Maou.jpg";
 import Linggar from "../assets/Linggar.jpg";
-import Adit from "../assets/Adit.png";
+import Adet from "../assets/Adet.jpg";
 
 function Content() {
   return (
@@ -24,11 +24,11 @@ function Content() {
           <Flexc className={`w-full`}>
             <Flexc
               between={true}
-              className={`w-[450px] bg-red-500 rounded-md shadow overflow-hidden group cursor-pointer`}
+              className={`select-none w-[450px] bg-red-500 rounded-md shadow overflow-hidden group cursor-pointer`}
             >
               <div className="flex-1 basis-[300px] text-center text-white print:text-gray-400">
-                <i class="fa-solid fa-user-secret text-[5rem]"></i>
-                <p className="text-[1.5rem]">Qori</p>
+                <i className="fa-solid fa-user-secret text-[5rem]"></i>
+                <p className="text-[1.5rem]">Qor</p>
                 <p className="text-[1rem] leading-none">{`{ Boss }`}</p>
               </div>
               <div className="w-0 overflow-hidden transition-all duration-300 ease-in-out bg-red-400 group-hover:w-full">
@@ -47,55 +47,81 @@ function Content() {
             bgColor={`bg-sky-600 print:bg-sky-600`}
             topHeader={
               <>
-                <Flexc
-                  start={true}
-                  style={{ scrollBehavior: "smooth" }}
-                  className="absolute bg-red-400 w-full overflow-auto h-full left-[-200px] group-hover:left-[0px] transition-all duration-200 ease-in-out"
-                >
-                  <Flexc className={`relative h-full`}>
-                    <Flexc
-                      id={`Linggar`}
-                      vend={true}
-                      className={`bg-[url(${Linggar})] bg-no-repeat bg-cover bg-[center_-50px] h-full w-[150px] md:w-[180px]`}
-                    >
-                      <a href="#Andria">
-                        <div className="w-[180px] bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                          Linggar
+                <Flexc className="absolute bg-red-400 w-full h-full left-[-200px] group-hover:left-[0px] transition-all duration-200 ease-in-out">
+                  <Flexc
+                    start={true}
+                    style={{ scrollBehavior: "smooth" }}
+                    className={`relative w-full h-full overflow-auto`}
+                  >
+                    <Flexc className={`relative h-full`}>
+                      <Flexc
+                        onClick={() => {
+                          window.location.href = "#Andria";
+                        }}
+                        id={`Linggar`}
+                        vend={true}
+                        style={{
+                          background: `url(${Linggar}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -40px`,
+                        }}
+                        className={`h-full w-[150px] md:w-[180px]`}
+                      >
+                        <div className="select-none flex-1 bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Ling
                         </div>
-                      </a>
-                    </Flexc>
-                    <Flexc
-                      id={`Andria`}
-                      vend={true}
-                      className={`bg-[url(${Andria})] bg-no-repeat bg-cover h-full w-[150px] md:w-[180px]`}
-                    >
-                      <a href="#Lana">
-                        <div className="w-[180px] bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                          Andria
+                      </Flexc>
+                      <Flexc
+                        onClick={() => {
+                          window.location.href = "#Maou";
+                        }}
+                        id={`Andria`}
+                        vend={true}
+                        style={{
+                          background: `url(${Andria}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center 0px`,
+                        }}
+                        className={`h-full w-[150px] md:w-[180px]`}
+                      >
+                        <div className="select-none flex-1 bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          An
                         </div>
-                      </a>
-                    </Flexc>
-                    <Flexc
-                      id={`Lana`}
-                      vend={true}
-                      className={`bg-[url(${Lana})] bg-no-repeat bg-cover h-full w-[150px] md:w-[180px]`}
-                    >
-                      <a href="#Adit">
-                        <div className="w-[180px] bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                          Lana
+                      </Flexc>
+                      <Flexc
+                        onClick={() => {
+                          window.location.href = "#Adet";
+                        }}
+                        id={`Maou`}
+                        vend={true}
+                        style={{
+                          background: `url(${Maou}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -30px`,
+                        }}
+                        className={`h-full w-[150px] md:w-[180px]`}
+                      >
+                        <div className="select-none flex-1 bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Lan
                         </div>
-                      </a>
-                    </Flexc>
-                    <Flexc
-                      id={`Adit`}
-                      vend={true}
-                      className={`bg-[url(${Adit})] bg-no-repeat bg-[cover] h-full w-[150px] md:w-[180px]`}
-                    >
-                      <a href="#Linggar">
-                        <div className="w-[180px] bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                          Adit
+                      </Flexc>
+                      <Flexc
+                        onClick={() => {
+                          window.location.href = "#Linggar";
+                        }}
+                        id={`Adet`}
+                        vend={true}
+                        style={{
+                          background: `url(${Adet}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -20px`,
+                        }}
+                        className={`h-full w-[150px] md:w-[180px]`}
+                      >
+                        <div className="select-none flex-1 bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Dit
                         </div>
-                      </a>
+                      </Flexc>
                     </Flexc>
                   </Flexc>
                 </Flexc>
@@ -118,7 +144,7 @@ function Content() {
                 icon: <i className="fa-solid fa-mars"></i>,
                 text: (
                   <>
-                    <p className="text-left text-[1.5em] leading-none">7</p>
+                    <p className="text-left text-[1.5em] leading-none">6</p>
                     <p className="text-left text-[0.9em] leading-none">Pria</p>
                   </>
                 ),

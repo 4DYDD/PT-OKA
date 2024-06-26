@@ -7,7 +7,7 @@ export default function LoadingScreen() {
         <div className="kotak--wan relative bg-primary h-[250px] flex justify-center md:!justify-start items-center overflow-hidden">
           {/* <LOGONYA> */}
           <div className="relative flex items-center justify-center w-[200px]">
-            <div class="relative animate-buletann md:!animate-buletan w-[150px] h-[150px] text-[1em] overflow-hidden bg-primary flex justify-center items-center rounded-full">
+            <div className="relative animate-buletann md:!animate-buletan w-[150px] h-[150px] text-[1em] overflow-hidden bg-primary flex justify-center items-center rounded-full">
               <div className="relative rounded-full w-[5em] h-[5em] border-[0.5em] border-white"></div>
               <div className="garis--wan absolute bg-primary w-[5.15em]"></div>
               <div className="garis--tu absolute bg-primary w-[5.15em]"></div>

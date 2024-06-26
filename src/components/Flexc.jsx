@@ -15,6 +15,7 @@ export default function Flexc({
   astart,
   acenter,
   aend,
+  onClick,
 }) {
   return (
     <>
@@ -48,6 +49,7 @@ export default function Flexc({
         ${className && className}
         `}
         style={style && style}
+        onClick={onClick && onClick}
       >
         {children}
       </div>

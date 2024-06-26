@@ -6,6 +6,7 @@
   "homepage": "https://github.com/4DYDD/PT-OKA.git",
   "scripts": {
     "start": "vite",
+    "tailwindw": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
     "tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --minify",
     "build": "vite build",
     "predeploy": "npm run build",
