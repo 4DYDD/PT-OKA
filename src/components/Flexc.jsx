@@ -1,5 +1,6 @@
 export default function Flexc({
   children,
+  id,
   className,
   style,
   start,
@@ -18,6 +19,7 @@ export default function Flexc({
   return (
     <>
       <div
+        id={`${id && id}`}
         className={`
         flex 
         ${start && "justify-start"} 
