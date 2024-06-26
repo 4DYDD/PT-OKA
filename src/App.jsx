@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
-  const [isLoading, setisLoading] = useState(true); // JANGAN LUPA TRUE KAN LAGI...!
+  const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
     return () => {
@@ -14,8 +14,6 @@ function App() {
       }, 5500);
     };
   }, []);
-
-  // JANGAN LUPA NYALAKAN LAGI KAN LAGI...!
 
   return (
     <>
