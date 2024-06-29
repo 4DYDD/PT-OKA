@@ -23,8 +23,7 @@ function Card({ font, bgColor, topHeader, header, rows, flex }) {
           {topHeader && topHeader}
           <div
             className={`${
-              topHeader &&
-              "group-hover:scale-0 transition-all duration-200 ease-in-out relative"
+              topHeader && " transition-all duration-200 ease-in-out relative"
             }`}
           >
             <div className="w-full text-[3.5em]">{header.icon}</div>
@@ -37,14 +36,14 @@ function Card({ font, bgColor, topHeader, header, rows, flex }) {
         {/* </PEMBATAS> */}
 
         <Flexc
-          className={`w-[200px] md:!max-w-[200px] h-full flex-col rounded overflow-hidden text-[1em] transition-all duration-200 ease-in-out`}
+          className={`w-[200px] md:!max-w-[200px] h-full flex-col rounded overflow-hidden text-[1em] transition-all duration-200 ease-in-out text-inherit`}
         >
           {rows.map((column, index) => (
             <React.Fragment key={index}>
               {/* <PEMBATAS> */}
               {index !== 0 && (
                 <div
-                  className="w-full h-[2px] bg-white"
+                  className="w-full h-[1.5px] bg-white"
                   key={`${index}--garis`}
                 ></div>
               )}

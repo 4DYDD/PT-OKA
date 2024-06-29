@@ -43,11 +43,11 @@ function Content() {
           </Flexc>
 
           <Card
-            font={`text-[0.8rem] md:text-[1rem] text-white print:text-gray-400`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
             bgColor={`bg-sky-600 print:bg-sky-600`}
             topHeader={
               <>
-                <Flexc className="absolute bg-red-400 w-full h-full left-[-200px] group-hover:left-[0px] transition-all duration-200 ease-in-out">
+                <Flexc className="absolute bg-red-400 w-full z-[2] h-full left-[-200px] group-hover:left-[0px] transition-all duration-200 ease-in-out">
                   <Flexc
                     start={true}
                     style={{ scrollBehavior: "smooth" }}
@@ -130,12 +130,28 @@ function Content() {
             header={{
               icon: (
                 <>
-                  <i className="fa-solid fa-users"></i>
+                  <div className="relative h-[1em] text-[1em] rounded-md m-auto">
+                    <div className="relative flex items-center justify-center w-full h-full rounded-md">
+                      <div className="relative text-white transition-all duration-200 ease-in-out bg-red-400 group-hover:opacity-50">
+                        <div className="absolute z-[3] group-hover:opacity-0 opacity-100 left-[-20px] text-[0.7em] transition-all duration-300 delay-150 ease-in-out top-[50%] translate-x-[-50%] group-hover:text-[0em] translate-y-[-50%]">
+                          <i className="text-gray-200 fa-solid fa-user drop-shadow-md"></i>
+                        </div>
+                        <div className="absolute z-[4] group-hover:opacity-0 opacity-100 left-[20px] text-[0.7em] transition-all duration-300 delay-150 ease-in-out top-[50%] translate-x-[-50%] group-hover:text-[0em] translate-y-[-50%]">
+                          <i className="text-gray-200 fa-solid fa-user drop-shadow-md"></i>
+                        </div>
+                        <div className="absolute z-[5] group-hover:opacity-50 group-hover:text-[0em] top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] transition-all duration-300 ease-in-out">
+                          <i className="fa-solid fa-user drop-shadow-md"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </>
               ),
               text: (
                 <>
-                  <p className="text-[0.8em]">Karyawan</p>
+                  <p className="text-[0.8em] group-hover:opacity-0 opacity-100 group-hover:text-[0em] delay-200 transition-all duration-200 ease-out">
+                    Karyawan
+                  </p>
                 </>
               ),
             }}
@@ -164,37 +180,77 @@ function Content() {
           />
 
           <Card
-            font={`text-[0.8rem] md:text-[1rem] text-white print:text-gray-400`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
             bgColor={`bg-yellow-500 print:bg-yellow-500`}
             header={{
-              icon: <i className="fa-solid fa-laptop-code"></i>,
+              icon: (
+                <div className="flex justify-center items-center relative group text-[0.33em] w-full h-[4em] bg-inherit">
+                  <div className="text-[2.8em] group-hover:text-yellow-100 group-hover:scale-105 scale-90 group-hover:rotate-[72.5deg] group-hover:top-[35%] md:group-hover:top-[20%] absolute transition-all duration-200 ease-in-out top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-[5]">
+                    <i className="fa-solid fa-star drop-shadow-md"></i>
+                  </div>
+                  <div className="text-[2.1em] group-hover:text-yellow-200 group-hover:scale-105 scale-90 group-hover:rotate-[-72.5deg] group-hover:top-7 group-hover:left-[15%] delay-100 absolute transition-all duration-200 ease-in-out top-[40%] left-[20%] translate-x-[-50%] translate-y-[-50%] text-gray-200 z-[4]">
+                    <i className="fa-solid fa-star drop-shadow-sm"></i>
+                  </div>
+                  <div className="text-[2.1em] group-hover:text-yellow-200 group-hover:scale-105 scale-90 group-hover:rotate-[72.5deg] group-hover:top-7 group-hover:left-[85%] delay-100 absolute transition-all duration-200 ease-in-out top-[40%] left-[80%] translate-x-[-50%] translate-y-[-50%] text-gray-200 z-[3]">
+                    <i className="fa-solid fa-star drop-shadow-sm"></i>
+                  </div>
+                  <div className="text-[1.6em] absolute group-hover:text-yellow-300 group-hover:scale-105 group-hover:rotate-[-72.5deg] scale-0 group-hover:left-[-10%] group-hover:top-[55%] delay-200 transition-all duration-200 ease-in-out top-[30%] left-[0%] translate-x-[-50%] translate-y-[-50%] text-gray-300 z-[2]">
+                    <i className="fa-solid fa-star drop-shadow-sm"></i>
+                  </div>
+                  <div className="text-[1.6em] absolute group-hover:text-yellow-300 group-hover:scale-105 group-hover:rotate-[72.5deg] scale-0 group-hover:left-[110%] group-hover:top-[55%] delay-200 transition-all duration-200 ease-in-out top-[30%] left-[100%] translate-x-[-50%] translate-y-[-50%] text-gray-300 z-[1]">
+                    <i className="fa-solid fa-star drop-shadow-sm"></i>
+                  </div>
+                </div>
+              ),
               text: (
                 <>
-                  <p className="leading-none text-[0.8em]">Projek</p>
+                  <p className="leading-none text-[0.8em]">Penilaian</p>
                 </>
               ),
             }}
             rows={[
               {
-                icon: <i className="leading-none fa-solid fa-square-check"></i>,
+                icon: (
+                  <div className="relative flex items-center justify-center w-full h-[50px]">
+                    <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full flex justify-center items-center">
+                      <i className="fa-solid fa-star text-[0.95em]">
+                        <Flexc>
+                          <i className="fa-solid fa-circle-plus text-[0.4em] absolute left-[50%] top-[52%] translate-x-[-50%] translate-y-[-50%] text-yellow-500"></i>
+                        </Flexc>
+                      </i>
+                    </div>
+                  </div>
+                ),
                 text: (
                   <>
-                    <div className="text-left text-[1.5em] leading-none">2</div>
+                    <div className="text-left text-[1.5em] leading-none">
+                      0.006k+
+                    </div>
                     <div className="text-left text-[0.9em] leading-none">
-                      Selesai
+                      jumlah penilaian
                     </div>
                   </>
                 ),
               },
               {
                 icon: (
-                  <i className="leading-none fa-solid fa-bars-progress"></i>
+                  <div className="relative flex items-center justify-center w-full h-[50px]">
+                    <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full flex justify-center items-center">
+                      <i className="fa-solid fa-star text-[0.95em]">
+                        <Flexc>
+                          <i className="fa-solid fa-chart-simple text-[0.4em] absolute left-[50%] top-[52%] translate-x-[-50%] translate-y-[-50%] text-yellow-500"></i>
+                        </Flexc>
+                      </i>
+                    </div>
+                  </div>
                 ),
                 text: (
                   <>
-                    <div className="text-left text-[1.5em] leading-none">1</div>
+                    <div className="text-left text-[1.5em] leading-none">
+                      +0.006k
+                    </div>
                     <div className="text-left text-[0.9em] leading-none">
-                      Kemajuan
+                      trend penilaian
                     </div>
                   </>
                 ),
@@ -203,7 +259,7 @@ function Content() {
           />
 
           <Card
-            font={`text-[0.8rem] md:text-[1rem] text-white print:text-gray-400`}
+            font={`text-[0.75rem] md:text-[1rem] text-white print:text-gray-400`}
             bgColor={`bg-green-600 print:bg-green-600`}
             header={{
               icon: <i className="fa-solid fa-building text-[1.2em]"></i>,
