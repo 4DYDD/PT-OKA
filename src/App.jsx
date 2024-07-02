@@ -7,13 +7,13 @@ import LoadingScreen from "./components/LoadingScreen";
 function App() {
   const [isLoading, setisLoading] = useState(true);
 
-  // useEffect(() => {
-  //   return () => {
-  //     setTimeout(() => {
-  //       setisLoading(false);
-  //     }, 5500);
-  //   };
-  // }, []);
+  useEffect(() => {
+    return () => {
+      setTimeout(() => {
+        setisLoading(false);
+      }, 2000);
+    };
+  }, []);
 
   return (
     <>
