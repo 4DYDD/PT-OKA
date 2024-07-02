@@ -7,13 +7,13 @@ import LayarLoading from "./components/LayarLoading";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    return () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 4500);
-    };
-  }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //     }, 4500);
+  //   };
+  // }, []);
 
   return (
     <>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function LayarLoading() {
   return (
     <>
-      <div className="kotak--utama fixed left-[50%] top-[50%] z-20 flex h-[110vh] w-[100vw] translate-x-[-50%] translate-y-[-50%] cursor-wait flex-col justify-center transition-all duration-500 ease-in-out">
+      <div className="kotak--utama fixed left-[50%] top-[50%] z-30 flex h-[110vh] w-[100vw] translate-x-[-50%] translate-y-[-50%] cursor-wait flex-col justify-center transition-all duration-500 ease-in-out">
         <div className="kotak--wan relative flex h-[250px] items-center justify-center overflow-hidden bg-primary md:!justify-start">
           {/* <LOGONYA> */}
           <div className="relative flex w-[200px] items-center justify-center">

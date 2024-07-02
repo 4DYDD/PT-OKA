@@ -22,6 +22,17 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    function scrollToElement(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        const topPos = element.offsetTop;
+        window.scrollTo({
+          top: topPos - 20, // Menambahkan efek scroll yang halus
+        });
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -15,21 +15,14 @@ export default function Flexc({
   astart,
   acenter,
   aend,
+  abet,
   onClick,
 }) {
   return (
     <>
       <div
         id={`${id && id}`}
-        className={`
-        flex 
-        ${start && "justify-start"} 
-        ${center && "justify-center"} 
-        ${end && "justify-end"} 
-        ${between && "justify-between"} 
-        ${around && "justify-around"} 
-        ${evenly && "justify-evenly"} 
-        ${
+        className={`flex ${start && "justify-start"} ${center && "justify-center"} ${end && "justify-end"} ${between && "justify-between"} ${around && "justify-around"} ${evenly && "justify-evenly"} ${
           !start &&
           !center &&
           !end &&
@@ -37,17 +30,7 @@ export default function Flexc({
           !around &&
           !evenly &&
           "justify-center"
-        }  
-        ${vstart && "items-start"} 
-        ${vcenter && "items-center"} 
-        ${vend && "items-end"} 
-        ${!vstart && !vcenter && !vend && "items-center"}  
-        ${astart && "content-start"} 
-        ${acenter && "content-center"} 
-        ${aend && "content-end"} 
-        ${!astart && !acenter && !aend && "content-center"}  
-        ${className && className}
-        `}
+        } ${vstart && "items-start"} ${vcenter && "items-center"} ${vend && "items-end"} ${!vstart && !vcenter && !vend && "items-center"} ${astart && "content-start"} ${acenter && "content-center"} ${aend && "content-end"} ${abet && "content-between"} ${!astart && !acenter && !aend && !abet && "content-center"} ${className && className}`}
         style={style && style}
         onClick={onClick && onClick}
       >

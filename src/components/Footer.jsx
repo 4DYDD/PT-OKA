@@ -5,7 +5,7 @@ function Footer() {
     <>
       <Flexc
         center={true}
-        className={`fixed bottom-0 w-full text-[0.8rem] bg-primary py-2 text-white`}
+        className={`fixed bottom-0 z-20 w-full bg-primary py-2 text-[0.8rem] text-white`}
       >
         <p>OKA COMPANY</p>
       </Flexc>
