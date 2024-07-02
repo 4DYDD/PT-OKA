@@ -3,15 +3,16 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
+import Teskan from "./components/Teskan";
 
 function App() {
-  const [isLoading, setisLoading] = useState(true);
-  const [angka, setAngka] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isTeskan, setIsTeskan] = useState(false);
 
   // useEffect(() => {
   //   return () => {
   //     setTimeout(() => {
-  //       setisLoading(false);
+  //       setIsLoading(false);
   //     }, 5500);
   //   };
   // }, []);
@@ -27,15 +28,16 @@ function App() {
       <br />
       <br />
       <br />
+      {isTeskan && <Teskan />}
 
       <div className="flex">
         <button
-          className="w-[3rem] py-1 m-auto text-white bg-blue-600 rounded shadow-sm text-lg"
+          className="m-auto w-[10rem] rounded bg-blue-600 py-1 text-lg text-white shadow-sm"
           onClick={() => {
-            setAngka(angka + 1);
+            setIsTeskan(!isTeskan);
           }}
         >
-          {angka}
+          MUNCULKAN TESKAN
         </button>
       </div>
 
