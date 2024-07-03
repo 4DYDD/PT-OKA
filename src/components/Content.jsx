@@ -7,6 +7,17 @@ import Linggar from "../assets/Linggar.jpg";
 import Adet from "../assets/Adet.jpg";
 
 function Content() {
+  function scrollToElement(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      const topPos = element.offsetTop;
+      window.scrollTo({
+        top: topPos + 50,
+      });
+      console.log(topPos + 10);
+    }
+  }
+
   return (
     <>
       <main className="min-h-[100vh] w-full">
@@ -34,7 +45,7 @@ function Content() {
                 <p className="text-[1.5rem]">Qor</p>
                 <p className="text-[1rem] leading-none">{`{ Boss }`}</p>
               </div>
-              <div className="w-0 overflow-hidden transition-all duration-300 ease-in-out bg-red-400 group-hover:w-full">
+              <div className="w-0 overflow-hidden bg-red-400 transition-all duration-300 ease-in-out group-hover:w-full">
                 <img
                   className="pointer-events-none h-[200px] w-[150%] object-cover object-top"
                   style={{ objectPosition: `center 30%` }}
@@ -51,85 +62,81 @@ function Content() {
               bgColor={`bg-sky-600 print:bg-sky-600`}
               topHeader={
                 <>
-                  <Flexc className="absolute left-[-200px] z-[2] h-full w-full bg-red-400 transition-all duration-200 ease-in-out group-hover:left-[0px]">
-                    <Flexc
-                      start={true}
-                      style={{ scrollBehavior: "smooth" }}
-                      className={`relative h-full w-full overflow-auto`}
-                    >
-                      <Flexc className={`relative h-full`}>
-                        <Flexc
-                          onClick={() => {
-                            window.location.href = "#Andria";
-                            scrollToElement("Andria");
-                          }}
-                          id={`Linggar`}
-                          vend={true}
-                          style={{
-                            background: `url(${Linggar}) no-repeat`,
-                            backgroundSize: `cover`,
-                            backgroundPosition: `center -40px`,
-                          }}
-                          className={`h-full w-[150px] md:w-[180px]`}
-                        >
-                          <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                            Ling
-                          </div>
-                        </Flexc>
-                        <Flexc
-                          onClick={() => {
-                            window.location.href = "#Maou";
-                            scrollToElement("Maou");
-                          }}
-                          id={`Andria`}
-                          vend={true}
-                          style={{
-                            background: `url(${Andria}) no-repeat`,
-                            backgroundSize: `cover`,
-                            backgroundPosition: `center 0px`,
-                          }}
-                          className={`h-full w-[150px] md:w-[180px]`}
-                        >
-                          <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                            An
-                          </div>
-                        </Flexc>
-                        <Flexc
-                          onClick={() => {
-                            window.location.href = "#Adet";
-                            scrollToElement("Adet");
-                          }}
-                          id={`Maou`}
-                          vend={true}
-                          style={{
-                            background: `url(${Maou}) no-repeat`,
-                            backgroundSize: `cover`,
-                            backgroundPosition: `center -30px`,
-                          }}
-                          className={`h-full w-[150px] md:w-[180px]`}
-                        >
-                          <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                            Lan
-                          </div>
-                        </Flexc>
-                        <Flexc
-                          onClick={() => {
-                            window.location.href = "#Linggar";
-                            scrollToElement("Linggar");
-                          }}
-                          id={`Adet`}
-                          vend={true}
-                          style={{
-                            background: `url(${Adet}) no-repeat`,
-                            backgroundSize: `cover`,
-                            backgroundPosition: `center -20px`,
-                          }}
-                          className={`h-full w-[150px] md:w-[180px]`}
-                        >
-                          <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
-                            Dit
-                          </div>
-                        </Flexc>
+                  <Flexc
+                    start={true}
+                    className="absolute left-[-200px] z-[2] h-full w-full snap-x snap-mandatory snap-always overflow-auto scroll-smooth bg-red-400 transition-all duration-200 ease-in-out group-hover:left-[0px]"
+                  >
+                    <Flexc className={`relative h-full`}>
+                      <Flexc
+                        onClick={() => {
+                          scrollToElement("Andria");
+                        }}
+                        id={`Linggar`}
+                        vend={true}
+                        style={{
+                          background: `url(${Linggar}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -40px`,
+                        }}
+                        className={`relative h-full w-[150px] snap-center md:w-[180px]`}
+                      >
+                        <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Ling
+                        </div>
+                      </Flexc>
+
+                      <Flexc
+                        onClick={() => {
+                          scrollToElement("Maou");
+                        }}
+                        id={`Andria`}
+                        vend={true}
+                        style={{
+                          background: `url(${Andria}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center 0px`,
+                        }}
+                        className={`relative h-full w-[150px] snap-center md:w-[180px]`}
+                      >
+                        <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          An
+                        </div>
+                      </Flexc>
+
+                      <Flexc
+                        onClick={() => {
+                          scrollToElement("Adet");
+                        }}
+                        id={`Maou`}
+                        vend={true}
+                        style={{
+                          background: `url(${Maou}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -30px`,
+                        }}
+                        className={`relative h-full w-[150px] snap-center md:w-[180px]`}
+                      >
+                        <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Lan
+                        </div>
+                      </Flexc>
+
+                      <Flexc
+                        onClick={() => {
+                          scrollToElement("Linggar");
+                        }}
+                        id={`Adet`}
+                        vend={true}
+                        style={{
+                          background: `url(${Adet}) no-repeat`,
+                          backgroundSize: `cover`,
+                          backgroundPosition: `center -20px`,
+                        }}
+                        className={`relative h-full w-[150px] snap-center md:w-[180px]`}
+                      >
+                        <div className="flex-1 select-none bg-gradient-to-t from-[rgba(0,0,0,0.8)] leading-9">
+                          Dit
+                        </div>
                       </Flexc>
                     </Flexc>
                   </Flexc>
@@ -139,13 +146,13 @@ function Content() {
                 icon: (
                   <>
                     <div className="relative m-auto h-[1em] rounded-md text-[1em]">
-                      <div className="relative flex items-center justify-center w-full h-full rounded-md">
-                        <div className="relative text-white transition-all duration-200 ease-in-out bg-red-400 group-hover:opacity-50">
+                      <div className="relative flex h-full w-full items-center justify-center rounded-md">
+                        <div className="relative bg-red-400 text-white transition-all duration-200 ease-in-out group-hover:opacity-50">
                           <div className="absolute left-[-20px] top-[50%] z-[3] translate-x-[-50%] translate-y-[-50%] text-[0.7em] opacity-100 transition-all delay-150 duration-300 ease-in-out group-hover:text-[0em] group-hover:opacity-0">
-                            <i className="text-gray-200 fa-solid fa-user drop-shadow-md"></i>
+                            <i className="fa-solid fa-user text-gray-200 drop-shadow-md"></i>
                           </div>
                           <div className="absolute left-[20px] top-[50%] z-[4] translate-x-[-50%] translate-y-[-50%] text-[0.7em] opacity-100 transition-all delay-150 duration-300 ease-in-out group-hover:text-[0em] group-hover:opacity-0">
-                            <i className="text-gray-200 fa-solid fa-user drop-shadow-md"></i>
+                            <i className="fa-solid fa-user text-gray-200 drop-shadow-md"></i>
                           </div>
                           <div className="absolute left-[50%] top-[50%] z-[5] translate-x-[-50%] translate-y-[-50%] transition-all duration-300 ease-in-out group-hover:text-[0em] group-hover:opacity-50">
                             <i className="fa-solid fa-user drop-shadow-md"></i>
@@ -313,6 +320,7 @@ function Content() {
                 },
               ]}
             />
+            {/* <Card /> */}
           </Flexc>
 
           {/* ----------------- */}
